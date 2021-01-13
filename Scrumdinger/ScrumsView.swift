@@ -2,7 +2,7 @@
 //  ScrumsView.swift
 //  Scrumdinger
 //
-//  Created by Evidence Osikhena on 13/01/2021.
+//  Created by Evidence Rex Osikhena on 13/01/2021.
 //
 
 import SwiftUI

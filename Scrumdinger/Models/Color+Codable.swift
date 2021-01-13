@@ -1,6 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+//
+//  Color+Codable.swift
+//  Scrumdinger
+//
+//  Created by Evidence Rex Osikhena on 13/01/2021.
+//
 
 import SwiftUI
 

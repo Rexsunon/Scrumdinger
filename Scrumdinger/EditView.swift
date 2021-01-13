@@ -2,7 +2,7 @@
 //  EditView.swift
 //  Scrumdinger
 //
-//  Created by Evidence Osikhena on 13/01/2021.
+//  Created by Evidence Rex Osikhena on 13/01/2021.
 //
 
 import SwiftUI
@@ -19,10 +19,14 @@ struct EditView: View {
                     Slider(value: $scrumData.lengthInMinutes, in: 5...30, step: 1.0) {
                         Text("Lenth")
                     }
+                    .accessibilityValue("\(Int(scrumData.lengthInMinutes)) minutes")
+
                     Spacer()
                     Text("\(Int(scrumData.lengthInMinutes)) minutes")
+                        .accessibilityHidden(true)
                 }
                 ColorPicker("Color", selection: $scrumData.color)
+                    .accessibilityValue("Color Picker")
             }
 
             Section(header: Text("Attendees")) {
@@ -32,7 +36,7 @@ struct EditView: View {
                 .onDelete { indices in
                     scrumData.attendees.remove(atOffsets: indices)
                 }
-                
+
                 HStack {
                     TextField("Attendee", text: $newAttendee)
                     Button(action: {
@@ -42,6 +46,7 @@ struct EditView: View {
                         }
                     }) {
                         Image(systemName: "plus.circle.fill")
+                            .accessibilityValue("Add attendee")
                     }
                     .disabled(newAttendee.isEmpty)
                 }
