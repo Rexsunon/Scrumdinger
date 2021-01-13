@@ -16,6 +16,7 @@
 		AF606C6925AF451E00CF4B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF606C6825AF451E00CF4B64 /* Assets.xcassets */; };
 		AF606C6D25AF616F00CF4B64 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */; };
 		AF606C7025AF713300CF4B64 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C6F25AF713300CF4B64 /* DetailView.swift */; };
+		AF606C7325AF99B400CF4B64 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C7225AF99B400CF4B64 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AF606C6825AF451E00CF4B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Documents/Scrumdinger resource/CreatingACardView/Complete/Scrumdinger/Assets.xcassets"; sourceTree = "<group>"; };
 		AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		AF606C6F25AF713300CF4B64 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AF606C7225AF99B400CF4B64 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				AF606C5B25AF3D8400CF4B64 /* CardView.swift */,
 				AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */,
 				AF606C6F25AF713300CF4B64 /* DetailView.swift */,
+				AF606C7225AF99B400CF4B64 /* EditView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				AF606C4525AE9CE000CF4B64 /* MeetingView.swift in Sources */,
 				AF606C6D25AF616F00CF4B64 /* ScrumsView.swift in Sources */,
+				AF606C7325AF99B400CF4B64 /* EditView.swift in Sources */,
 				AF606C5925AF3AFA00CF4B64 /* DailyScrum.swift in Sources */,
 				AF606C7025AF713300CF4B64 /* DetailView.swift in Sources */,
 				AF606C5C25AF3D8400CF4B64 /* CardView.swift in Sources */,
