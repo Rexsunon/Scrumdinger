@@ -11,6 +11,7 @@
 		AF606C4525AE9CE000CF4B64 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C4425AE9CE000CF4B64 /* MeetingView.swift */; };
 		AF606C4725AE9CE000CF4B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF606C4625AE9CE000CF4B64 /* Assets.xcassets */; };
 		AF606C4A25AE9CE000CF4B64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF606C4925AE9CE000CF4B64 /* Preview Assets.xcassets */; };
+		AF606C5925AF3AFA00CF4B64 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C5825AF3AFA00CF4B64 /* DailyScrum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		AF606C4625AE9CE000CF4B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF606C4925AE9CE000CF4B64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF606C4B25AE9CE000CF4B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF606C5825AF3AFA00CF4B64 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 		AF606C3625AE9CDF00CF4B64 = {
 			isa = PBXGroup;
 			children = (
+				AF606C5725AF3AE400CF4B64 /* Models */,
 				AF606C4125AE9CE000CF4B64 /* Scrumdinger */,
 				AF606C4025AE9CE000CF4B64 /* Products */,
 			);
@@ -67,6 +70,14 @@
 				AF606C4925AE9CE000CF4B64 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF606C5725AF3AE400CF4B64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF606C5825AF3AFA00CF4B64 /* DailyScrum.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF606C4525AE9CE000CF4B64 /* MeetingView.swift in Sources */,
+				AF606C5925AF3AFA00CF4B64 /* DailyScrum.swift in Sources */,
 				AF606C4325AE9CE000CF4B64 /* ScrumdingerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
