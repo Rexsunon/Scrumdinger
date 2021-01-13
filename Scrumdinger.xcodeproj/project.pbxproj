@@ -14,6 +14,7 @@
 		AF606C5C25AF3D8400CF4B64 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C5B25AF3D8400CF4B64 /* CardView.swift */; };
 		AF606C6325AF434F00CF4B64 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C6225AF434F00CF4B64 /* Color+Codable.swift */; };
 		AF606C6925AF451E00CF4B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF606C6825AF451E00CF4B64 /* Assets.xcassets */; };
+		AF606C6D25AF616F00CF4B64 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AF606C5B25AF3D8400CF4B64 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AF606C6225AF434F00CF4B64 /* Color+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		AF606C6825AF451E00CF4B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Documents/Scrumdinger resource/CreatingACardView/Complete/Scrumdinger/Assets.xcassets"; sourceTree = "<group>"; };
+		AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				AF606C4B25AE9CE000CF4B64 /* Info.plist */,
 				AF606C4825AE9CE000CF4B64 /* Preview Content */,
 				AF606C5B25AF3D8400CF4B64 /* CardView.swift */,
+				AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF606C4525AE9CE000CF4B64 /* MeetingView.swift in Sources */,
+				AF606C6D25AF616F00CF4B64 /* ScrumsView.swift in Sources */,
 				AF606C5925AF3AFA00CF4B64 /* DailyScrum.swift in Sources */,
 				AF606C5C25AF3D8400CF4B64 /* CardView.swift in Sources */,
 				AF606C6325AF434F00CF4B64 /* Color+Codable.swift in Sources */,
