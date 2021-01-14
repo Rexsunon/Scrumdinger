@@ -52,9 +52,9 @@ struct DetailView: View {
                     .navigationTitle(scrum.title)
                     .navigationBarItems(leading: Button("Cancel") {
                         isPresented = false
-                    },trailing: Button("Done") {
+                    }, trailing: Button("Done") {
                         isPresented = false
-//                        scrum.update(from: data)
+                        scrum.update(from: data)
                     })
             }
         }
