@@ -26,6 +26,8 @@ struct MeetingHeaderView: View {
         minutesRemaining == 1 ? "minute" : "minutes"
     }
 
+    let scrumColor: Color
+
     var body: some View {
         VStack {
             ProgressView(value: progress)
@@ -55,7 +57,7 @@ struct MeetingHeaderView: View {
 
 struct MeetingHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingHeaderView(secondsElaped: .constant(60), secondsRemaining: .constant(180))
+        MeetingHeaderView(secondsElaped: .constant(60), secondsRemaining: .constant(180), scrumColor: DailyScrum.data[0].color)
             .previewLayout(.sizeThatFits)
     }
 }
