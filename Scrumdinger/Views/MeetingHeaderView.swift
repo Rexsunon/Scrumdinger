@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct MeetingHeaderView: View {
-    @Binding var secondsElaped: Int
+    @Binding var secondsElapsed: Int
     @Binding var secondsRemaining: Int
 
     // calculates progress
     private var progress: Double {
         guard secondsRemaining > 0 else { return 1 }
-        let totalSeconds = Double(secondsElaped + secondsRemaining)
-        return Double(secondsElaped) / totalSeconds
+        let totalSeconds = Double(secondsElapsed + secondsRemaining)
+        return Double(secondsElapsed) / totalSeconds
     }
 
     private var minutesRemaining: Int {
@@ -37,7 +37,7 @@ struct MeetingHeaderView: View {
                 VStack(alignment: .leading) {
                     Text("Seconds Elapsed")
                         .font(.caption)
-                    Label("\(secondsElaped)", systemImage: "hourglass.bottomhalf.fill")
+                    Label("\(secondsElapsed)", systemImage: "hourglass.bottomhalf.fill")
                 }
 
                 Spacer()
@@ -62,7 +62,7 @@ struct MeetingHeaderView: View {
 
 struct MeetingHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        MeetingHeaderView(secondsElaped: .constant(60), secondsRemaining: .constant(180), scrumColor: DailyScrum.data[0].color)
+        MeetingHeaderView(secondsElapsed: .constant(60), secondsRemaining: .constant(180), scrumColor: DailyScrum.data[0].color)
             .previewLayout(.sizeThatFits)
     }
 }
