@@ -21,14 +21,14 @@ struct DetailView: View {
                         .foregroundColor(.accentColor)
                         .accessibilityLabel("Start meeting")
                 }
-                
+
                 HStack {
                     Label("Length", systemImage: "clock")
                         .accessibilityLabel("Meeting length")
                     Spacer()
                     Text("\(scrum.lengthInMinutes) minutes")
                 }
-                
+
                 HStack {
                     Label("Color", systemImage: "paintpalette")
                     Spacer()
@@ -37,10 +37,23 @@ struct DetailView: View {
                 }
                 .accessibilityElement(children: .ignore)
             }
-            
+
             Section(header: Text("Attendees")) {
                 ForEach(scrum.attendees, id: \.self) { attendee in
                     Label(attendee, systemImage: "person")
+                }
+            }
+
+            Section(header: Text("History")) {
+                if scrum.history.isEmpty {
+                    Label("No meeting has occurred", systemImage: "calendar.badge.exclamationmark")
+                } else {
+                    ForEach(scrum.history) { history in
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.date, style: .date)
+                        }
+                    }
                 }
             }
         }
