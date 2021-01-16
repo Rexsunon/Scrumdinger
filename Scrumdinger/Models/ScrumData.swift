@@ -2,7 +2,7 @@
 //  ScrumData.swift
 //  Scrumdinger
 //
-//  Created by Evidence Osikhena on 16/01/2021.
+//  Created by Evidence Rex Osikhena on 16/01/2021.
 //
 
 import Foundation
@@ -21,5 +21,24 @@ class ScrumData: ObservableObject {
     
     private static var fileURL: URL {
         return documentFolder.appendingPathComponent("scrum.data")
+    }
+    
+    func load() {
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let data = try? Data(contentsOf: Self.fileURL) else {
+                #if DEBUG
+                DispatchQueue.main.async {
+                    self?.scrums = DailyScrum.data
+                }
+                #endif
+                return
+            }
+            guard let dailyScrums = try? JSONDecoder().decode([DailyScrum].self, from: data) else {
+                fatalError("Can't decode saved scrum data.")
+            }
+            DispatchQueue.main.async {
+                self?.scrums = dailyScrums
+            }
+        }
     }
 }

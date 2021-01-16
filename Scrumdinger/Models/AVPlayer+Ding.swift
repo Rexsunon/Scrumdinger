@@ -1,6 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+//
+//  DailyScrum.swift
+//  Scrumdinger
+//
+//  Created by Evidence Rex Osikhena on 13/01/2021.
+//
 
 import Foundation
 import AVFoundation
