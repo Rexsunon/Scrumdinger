@@ -11,8 +11,12 @@ import AVFoundation
 struct MeetingView: View {
     @Binding var scrum: DailyScrum
     @StateObject var scrumTimer = ScrumTimer()
+    @State private var transript = ""
+    @State private var isRecording = false
+    
     var player: AVPlayer { AVPlayer.sharedDingPlayer }
-
+    private let speechRecognizer = SpeechRecognizer()
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16.0)
@@ -27,14 +31,20 @@ struct MeetingView: View {
         .foregroundColor(scrum.color.accessibleFontColor)
         .onAppear {
             scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes, attendees: scrum.attendees)
-            scrumTimer.startScrum()
+            
             scrumTimer.speakerChangedAction = {
                 player.seek(to: .zero)
                 player.play()
             }
+            
+            speechRecognizer.record(to: $transript)
+            isRecording = true
+            scrumTimer.startScrum()
         }
         .onDisappear {
             scrumTimer.stopScrum()
+            speechRecognizer.stopRecording()
+            isRecording = false
             let newHistory = History(attendees: scrum.attendees, lengthOfMinutes: scrumTimer.lengthInMinutes)
             scrum.history.insert(newHistory, at: 0)
         }
