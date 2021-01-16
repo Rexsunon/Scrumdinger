@@ -22,6 +22,14 @@ struct MeetingTimerView: View {
             }
             .accessibilityElement(children: .combine)
             .foregroundColor(scrumColor.accessibleFontColor)
+
+            ForEach(speakers) { speaker in
+                if speaker.isCompleted, let index = speakers.firstIndex(where: { $0.id == speaker.id }) {
+                    SpeakerArc(speakerIndex: index, totalSpeakers: speakers.count)
+                        .rotation(Angle(degrees: -90))
+                        .stroke(scrumColor, lineWidth: 12)
+                }
+            }
         }
         .padding(.horizontal)
         
@@ -62,6 +70,6 @@ struct SpeakerArc: Shape {
 struct MeetingTimerView_Previews: PreviewProvider {
     @State static var speakers = [ScrumTimer.Speaker(name: "Rex", isCompleted: true), ScrumTimer.Speaker(name: "Jide", isCompleted: false)]
     static var previews: some View {
-        MeetingTimerView(scrumColor: Color("Dsign"), speakers: $speakers)
+        MeetingTimerView(scrumColor: Color("Design"), speakers: $speakers)
     }
 }
