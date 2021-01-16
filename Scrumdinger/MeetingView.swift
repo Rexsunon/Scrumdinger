@@ -13,17 +13,17 @@ struct MeetingView: View {
     @StateObject var scrumTimer = ScrumTimer()
     @State private var transript = ""
     @State private var isRecording = false
-    
+
     var player: AVPlayer { AVPlayer.sharedDingPlayer }
     private let speechRecognizer = SpeechRecognizer()
-    
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16.0)
                 .fill(scrum.color)
             VStack {
                 MeetingHeaderView(secondsElapsed: $scrumTimer.secondsElapsed, secondsRemaining: $scrumTimer.secondsRemaining, scrumColor: scrum.color)
-                MeetingTimerView(scrumColor: scrum.color, speakers: $scrumTimer.speakers)
+                MeetingTimerView(scrumColor: scrum.color, speakers: $scrumTimer.speakers, isRecording: $isRecording)
                 MeetingFooterView(speakers: $scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
             }
         }
@@ -31,12 +31,12 @@ struct MeetingView: View {
         .foregroundColor(scrum.color.accessibleFontColor)
         .onAppear {
             scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes, attendees: scrum.attendees)
-            
+
             scrumTimer.speakerChangedAction = {
                 player.seek(to: .zero)
                 player.play()
             }
-            
+
             speechRecognizer.record(to: $transript)
             isRecording = true
             scrumTimer.startScrum()
