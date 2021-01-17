@@ -11,12 +11,14 @@ struct History: Identifiable, Codable {
     var id: UUID
     var date: Date
     var attendees: [String]
-    var lengthOfMinutes: Int
+    var lengthInMinutes: Int
+    var transcript: String?
     
-    init(id: UUID = UUID(), date: Date = Date(), attendees: [String], lengthOfMinutes: Int) {
+    init(id: UUID = UUID(), date: Date = Date(), attendees: [String], lengthInMinutes: Int, transcript: String? = nil) {
         self.id = id
         self.date = date
         self.attendees = attendees
-        self.lengthOfMinutes = lengthOfMinutes
+        self.lengthInMinutes = lengthInMinutes
+        self.transcript = transcript
     }
 }
