@@ -67,13 +67,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF461D8C25B057240098A75B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		AF461DA725B135C20098A75B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,22 +95,12 @@
 			isa = PBXGroup;
 			children = (
 				AF461DA725B135C20098A75B /* Resources */,
-				AF461D8C25B057240098A75B /* Views */,
 				AF606C5725AF3AE400CF4B64 /* Models */,
-				AF606C4225AE9CE000CF4B64 /* ScrumdingerApp.swift */,
-				AF606C4425AE9CE000CF4B64 /* MeetingView.swift */,
-				AF606C5B25AF3D8400CF4B64 /* CardView.swift */,
-				AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */,
-				AF606C6F25AF713300CF4B64 /* DetailView.swift */,
-				AF606C7225AF99B400CF4B64 /* EditView.swift */,
-				AF461D8925B057070098A75B /* MeetingHeaderView.swift */,
-				AF461D9725B08A620098A75B /* MeetingFooterView.swift */,
-				AF461D8E25B0752E0098A75B /* ScrumProgressViewStyle.swift */,
+				AFA16CB125BF1218005BB6B1 /* Views */,
 				AF606C6825AF451E00CF4B64 /* Assets.xcassets */,
 				AF606C4B25AE9CE000CF4B64 /* Info.plist */,
+				AF606C4225AE9CE000CF4B64 /* ScrumdingerApp.swift */,
 				AF606C4825AE9CE000CF4B64 /* Preview Content */,
-				AF421B3F25B28D74000004F8 /* MeetingTimerView.swift */,
-				AF421B4625B3B6B5000004F8 /* HistoryView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -142,6 +125,23 @@
 				AF421B4225B34013000004F8 /* SpeechRecognizer.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AFA16CB125BF1218005BB6B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF606C4425AE9CE000CF4B64 /* MeetingView.swift */,
+				AF606C5B25AF3D8400CF4B64 /* CardView.swift */,
+				AF606C6C25AF616F00CF4B64 /* ScrumsView.swift */,
+				AF606C6F25AF713300CF4B64 /* DetailView.swift */,
+				AF606C7225AF99B400CF4B64 /* EditView.swift */,
+				AF461D8925B057070098A75B /* MeetingHeaderView.swift */,
+				AF461D9725B08A620098A75B /* MeetingFooterView.swift */,
+				AF461D8E25B0752E0098A75B /* ScrumProgressViewStyle.swift */,
+				AF421B3F25B28D74000004F8 /* MeetingTimerView.swift */,
+				AF421B4625B3B6B5000004F8 /* HistoryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
